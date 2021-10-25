@@ -26,7 +26,7 @@ Player should be able to:
 
 ### Screenshot
 
-![Chat app CSS illustration](https://www.screencast.com/t/h1EPsm3v6s68)
+![Chat app CSS illustration](https://raw.githubusercontent.com/rohits673/Shot-the-circle-js-game/master/Shot-the-circle-js-game.jpg)
 
 ### Links
 
