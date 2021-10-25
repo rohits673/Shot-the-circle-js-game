@@ -59,10 +59,8 @@ for (let i = 0; i < holes.length; i++) {
   holes[i].addEventListener("click", function addScore() {
     if (this.id == selectedHole.id) {
       scoreBox.innerHTML = score += 1;
-      console.log("click event add");
     } else {
       scoreBox.innerHTML = score -= 1;
-      console.log("click event sub");
     }
   });
 }
@@ -84,8 +82,6 @@ function startGame() {
     selectedHole.classList.add("selectedHole");
     gameTime++;
     scorePercentage = (score / gameTime) * 100;
-    console.log(gameTime);
-    console.log(jumpCount);
 
     if (gameTime <= jumpCount || score === jumpCount) {
       holeInterval = setTimeout(function () {
@@ -116,7 +112,6 @@ function unCheck() {
 }
 
 function stopGame() {
-  console.log(scorePercentage);
   remarks.innerHTML =
     scorePercentage < 60
       ? "Need Practice"
