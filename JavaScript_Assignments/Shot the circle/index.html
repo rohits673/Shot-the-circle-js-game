@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="app.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Shot the circle</h1>
+        <p>Test your skills, How many boxes can you check in 30 seconds?</p>
+        <div class="controls">
+            <div class="left">
+                <button id="startBtn" class="startGame" onclick="startGame()">
+                    Start Game</button>
+                <button id="stopBtn" class="stopGame" onclick="stopGame(); stopTimer();">
+                    Stop Game</button>
+                <p>Press the Start Game button to play</p>
+            </div>
+            <div class="right">
+                <p>Time: <input type="number" id="setTime" value="30"></p>
+                <p>Score: <span id="score">0</span></p>
+            </div>
+        </div>
+        <div class="scoreboard">
+            <div class="score">
+                <h3>Gameover!</h3>
+                <h2 class="remarks"></h2>
+                <button class="startGame restart" onclick="startGame()">Restart Game</button>
+            </div>
+        </div>
+        <div id="game">
+            <div id="grid">
+                <!--radioBoxes 6*10 matrix -->
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
