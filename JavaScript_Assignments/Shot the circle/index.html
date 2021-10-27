@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="app.css">
+
+</head>
+
+<body>
+    <div class="container flex-container flex-column">
+        <h1>Shot the circle</h1>
+        <p>Test your skills, How many boxes can you check in 30 seconds?</p>
+        <div class="controls flex-container">
+            <div class="left">
+                <button id="startBtn" class="start-game" onclick="startGame()">
+                    Start Game</button>
+                <button id="stopBtn" class="stop-game" onclick="stopGame(); stopTimer();">
+                    Stop Game</button>
+                <p>Press the Start Game button to play</p>
+            </div>
+            <div class="right">
+                <form id="timeInput" role="time input">
+                    <p>Time: <input type="number" id="setTime" class="set-time" name="time-input" value="30" min="5"
+                            max="60" /></p>
+                </form>
+                <p>Score: <span id="gameScore" class="score">0</span></p>
+            </div>
+        </div>
+        <div class="scoreboard-container">
+            <div class="scoreboard flex-container flex-column">
+                <h3>Gameover!</h3>
+                <h2 class="remarks">remarks</h2>
+                <h3 class="scorePercent">score percentage</h3>
+                <button class="startGame restart" onclick="startGame()">Restart Game</button>
+            </div>
+        </div>
+        <div id="game" class="game-container flexContainer">
+            <form id="grid" class="radio-grid flexContainer" role="radio buttons grid">
+                <!--radioBoxes 6*10 matrix -->
+            </form>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
