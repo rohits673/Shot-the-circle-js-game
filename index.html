@@ -17,17 +17,13 @@
             <p>Test your skills, How many boxes can you check in 30 seconds?</p>
             <div class="controls flex_container">
                 <div class="game_controls">
-                    <button type="button" name="startbtn" id="start_btn" class="start_game" onclick="startGame()">
-                        Start Game</button>
-                    <button type="button" name="stopbtn" id="stop_btn" class="stop_game"
-                        onclick="stopGame(); stopTimer();">
-                        Stop Game</button>
+                    <button type="button" name="startbtn" id="start_btn" class="start_game" onclick="startGame()">Start Game</button>
+                    <button type="button" name="stopbtn" id="stop_btn" class="stop_game" onclick="stopGame(); stopTimer();">Stop Game</button>
                     <p>Press the Start Game button to play</p>
                 </div>
                 <div class="game_timer">
                     <form id="input_time">
-                        <p>Time: <input type="number" id="set_time" name="set_time" class="time_input" value="30"
-                                min="5" max="60" /></p>
+                        <p>Time: <input type="number" id="set_time" name="set_time" class="time_input" value="30" min="5" max="60" /></p>
                     </form>
                     <p>Score: <span id="game_score" class="score">0</span></p>
                 </div>
