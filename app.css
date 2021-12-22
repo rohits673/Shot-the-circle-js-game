@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-.main-container {
+.main-containe {
   min-height: 100vh;
   display: grid;
   place-items: center;
