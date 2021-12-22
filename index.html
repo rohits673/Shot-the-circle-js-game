@@ -14,21 +14,16 @@
     <div class="main-container">
         <div class="container flex-container flex-column">
             <h1 class="heading1">Shot The Circle</h1>
-            <p>Test your skills, How many boxes can you check in <span class="challenge-timer">30</span> seconds?
-            </p>
+            <p>Test your skills, How many boxes can you check in <span class="challenge-timer">30</span> seconds?</p>
             <div class="controls flex-container">
                 <div class="game-controls">
-                    <button type="button" name="start_btn" id="start_btn" class="start-game" onclick="startGame()">
-                        Start Game</button>
-                    <button type="button" name="stop_btn" id="stop_btn" class="stop-game"
-                        onclick="stopGame(); stopTimer();">
-                        Stop Game</button>
+                    <button type="button" name="start_btn" id="start_btn" class="start-game" onclick="startGame()">Start Game</button>
+                    <button type="button" name="stop_btn" id="stop_btn" class="stop-game" onclick="stopGame(); stopTimer();">Stop Game</button>
                     <p>Press the Start Game button to play</p>
                 </div>
                 <div class="game-timer">
                     <form id="input_time">
-                        <p>Time: <input type="number" id="set_time" name="set_time" class="time-input" value="30"
-                                min="5" max="60" /></p>
+                        <p>Time: <input type="number" id="set_time" name="set_time" class="time-input" value="30" min="5" max="60" /></p>
                     </form>
                     <p>Score: <span id="game_score" class="score">0</span></p>
                 </div>
