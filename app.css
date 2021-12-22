@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-.main_container {
+.main-container {
   min-height: 100vh;
   display: grid;
   place-items: center;
@@ -15,12 +15,12 @@
   font-family: "Roboto", sans-serif;
 }
 
-.flex_container {
+.flex-container {
   display: flex;
   justify-content: center;
 }
 
-.flex_column {
+.flex-column {
   flex-direction: column;
   align-items: center;
 }
@@ -39,49 +39,47 @@
   width: inherit;
 }
 
-.left {
+.game-controls {
   padding-top: 16px;
 }
 
-.right {
+.game-timer {
   text-align: right;
 }
 
-.time_input {
+.time-input, .score {
   width: 50px;
   height: 20px;
 }
 
 .score {
   display: inline-block;
-  height: 20px;
-  width: 50px;
   padding: 1px 2px;
-  border: 1px solid grey;
+  border: 1px solid #808080;
 }
 
-.game_container {
+.game-container {
   padding: 10px 0 20px 0;
   margin: 10px 0 20px 0;
 }
 
-.radio_grid {
+.radio-grid {
   flex-wrap: wrap;
-  width: 300px;
-  height: 180px;
+  width: 320px;
+  height: 192px;
 }
 
 .holes {
   -webkit-appearance: none;
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   margin: 5px;
-  border: 1px solid darkgray;
+  border: 1px solid #a9a9a9;
   border-radius: 50%;
-  box-shadow: 0 0 5px 0 gray inset;
+  box-shadow: 0 0 5px 0 #808080 inset;
 }
 
-.selected_hole {
+.selected-hole {
   box-shadow: 0 0 10px 0 rgb(255, 0, 0) inset;
 }
 
@@ -95,19 +93,17 @@
 }
 
 .holes:checked:before {
-  background: green;
+  background: #008000;
 }
 
-.scoreboard_container {
+.scoreboard-container {
   position: fixed;
-  height: 100%;
-  width: 100%;
   z-index: 1000;
   background: rgba(241, 250, 238, 0.9);
   color: #000;
 }
 
-.scoreboard {
+.scoreboard, .scoreboard-container {
   height: 100%;
   width: 100%;
 }
@@ -121,8 +117,8 @@
   font-size: 2.7rem;
 }
 
-.start_game,
-.stop_game {
+.start-game,
+.stop-game {
   cursor: pointer;
   padding: 5px 11px;
   background: #a8dadc;
@@ -130,7 +126,7 @@
   border: 2px solid #457b9d;
 }
 
-.stop_game:disabled {
+.stop-game:disabled {
   background: #678586;
 }
 
@@ -139,7 +135,6 @@
   border-radius: 5px;
   background: #e63946;
   font-size: 22px;
-  color: #f1faee;
   width: 270px;
   margin-top: 10px;
 }

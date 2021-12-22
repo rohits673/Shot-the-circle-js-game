@@ -1,9 +1,10 @@
 const setTimer = document.querySelector("#set_time"); //Get input time from user
+const challengeTimer = document.querySelector(".challenge-timer"); //Upadates the challange time
 const radioGrid = document.querySelector("#grid"); //Grid for creating 6*10 radio buttons matrix
 const scoreBox = document.querySelector("#game_score"); //Score keeper box
-const scoreOverlay = document.querySelector(".scoreboard_container"); //Overlay after game ends
+const scoreOverlay = document.querySelector(".scoreboard-container"); //Overlay after game ends
 const remarks = document.querySelector(".remarks"); //remarks for the player
-const scorePercent = document.querySelector(".score_percent"); //Percentage container
+const scorePercent = document.querySelector(".score-percent"); //Percentage container
 const stopBtn = document.getElementById("stop_btn");  //stop button
 
 scoreOverlay.style.display = "none";
@@ -25,6 +26,7 @@ function startTimer() {
         }
     }, 1000);
     countDownSeconds = setTimer.value;
+    challengeTimer.innerHTML = countDownSeconds;
     jumpCount = setTimer.value;
 }
 
@@ -79,17 +81,17 @@ function startGame() {
     function gamePlay() {
         scoreOverlay.style.display = "none";
         selectedHole = randomHole();
-        selectedHole.classList.add("selected_hole");
+        selectedHole.classList.add("selected-hole");
         gameTime++;
         scorePercentage = (score / gameTime) * 100;
 
         if (gameTime <= jumpCount || score === jumpCount) {
             holeInterval = setTimeout(function () {
-                selectedHole.classList.remove("selected_hole");
+                selectedHole.classList.remove("selected-hole");
                 gamePlay();
             }, 1000);
         } else {
-            selectedHole.classList.remove("selected_hole");
+            selectedHole.classList.remove("selected-hole");
             scoreOverlay.style.display = "block";
             stopTimer();
             stopGame();
@@ -118,7 +120,7 @@ function stopGame() {
     clearInterval(holeInterval);
     unCheck();
     radioBtnStatus(true);
-    selectedHole?.classList?.remove("selected_hole");
+    selectedHole?.classList?.remove("selected-hole");
     score = gameTime = 0;
     scoreBox.innerHTML = 0;
     stopBtn.disabled = true;
