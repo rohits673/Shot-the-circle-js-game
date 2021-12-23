@@ -108,11 +108,11 @@
   width: 100%;
 }
 
-.heading1 {
+.main-heading {
   margin: 5px 0;
 }
 
-.heading3 {
+.gameover-text {
   margin: 10px 0;
   font-size: 2.7rem;
 }
